@@ -31,6 +31,7 @@ def primeFactorization(length):                    #分解质因数
     if d!=1:
         result.append([d,1])
     result.append([q,1])
+#     请问这个result列表的作用是什么？
     return result  
 
 def quickPower(a,b,c):                               #快速幂
@@ -47,6 +48,7 @@ def getGenerator(result):                             #get g
     while True:
         if quickPower(generator,q,p)!=1:
             generator+=1
+#             在这一步生成了一个q阶的g，想请问下下面这个else中的作用？
         else:
             for i in range(len(result)):
                 if quickPower(generator,int((p-1)/result[i][0]),p)==1:
